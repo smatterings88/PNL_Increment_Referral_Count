@@ -1,15 +1,25 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
+  "functions": {
+    "api/increment-referral.js": {
+      "maxDuration": 10
+    },
+    "api/health.js": {
+      "maxDuration": 5
     }
-  ],
+  },
   "routes": [
+    {
+      "src": "/api/increment-referral",
+      "dest": "/api/increment-referral"
+    },
     {
       "src": "/increment-referral",
       "dest": "/api/increment-referral"
+    },
+    {
+      "src": "/api/health",
+      "dest": "/api/health"
     },
     {
       "src": "/health",
