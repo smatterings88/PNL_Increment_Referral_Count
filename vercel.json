@@ -15,9 +15,5 @@
       "src": "/health",
       "dest": "/api/health"
     }
-  ],
-  "env": {
-    "GHL_API_KEY": "@ghl_api_key",
-    "GHL_LOCATION_ID": "@ghl_location_id"
-  }
+  ]
 }
